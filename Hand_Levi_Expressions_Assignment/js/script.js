@@ -30,6 +30,6 @@ mergeNumber[3] = prompt("Enter the total number of bars that make a full bundle"
 mergeNumber[4] = mergeNumber[0] *  mergeNumber[1] * mergeNumber[2];
 //console.log(mergeNumber[4]);
 
-mergeNumber[4] -= mergeNumber[3];
+mergeNumber[3] -= mergeNumber[4];
 
-alert(mergeNotification + mergeNumber[4] + ".");
+alert(mergeNotification + mergeNumber[3] + ".");
