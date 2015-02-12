@@ -12,9 +12,9 @@ drops make a full run to cut bundles into the proper size.
  */
 
 mergeNumber = [4];
-var numberOfBars = "Enter the total number of bars per bundle.";
-var barsInRun;
+var barsInRun = "The total number of drops per run is ";
 var mergeNotification = "The number of bars you need to merge from the next heat is ";
+var numberOfBars;
 
 // Initializing prompts to input data into the array variables for the merge number.
 mergeNumber[0] = prompt("Enter the number of drops remaining on the hot bed");
@@ -33,3 +33,8 @@ mergeNumber[4] = mergeNumber[0] *  mergeNumber[1] * mergeNumber[2];
 mergeNumber[3] -= mergeNumber[4];
 
 alert(mergeNotification + mergeNumber[3] + ".");
+
+// Calculating how many drops are in a full run.
+numberOfBars = prompt("Enter the total number of bars per bundle");
+
+console.log(numberOfBars);
