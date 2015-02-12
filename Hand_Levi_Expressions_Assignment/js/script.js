@@ -28,5 +28,8 @@ mergeNumber[3] = prompt("Enter the total number of bars that make a full bundle"
 
 // Multiplying variables in order to get the number of bars remaining in the run.
 mergeNumber[4] = mergeNumber[0] *  mergeNumber[1] * mergeNumber[2];
-console.log(mergeNumber[4]);
+//console.log(mergeNumber[4]);
 
+mergeNumber[4] -= mergeNumber[3];
+
+alert(mergeNotification + mergeNumber[4] + ".");
