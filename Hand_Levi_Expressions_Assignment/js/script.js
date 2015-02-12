@@ -37,4 +37,9 @@ alert(mergeNotification + mergeNumber[3] + ".");
 // Calculating how many drops are in a full run.
 numberOfBars = prompt("Enter the total number of bars per bundle");
 
+//console.log(numberOfBars);
+
+numberOfBars /= mergeNumber[2];
+
 console.log(numberOfBars);
+
