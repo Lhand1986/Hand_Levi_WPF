@@ -9,6 +9,16 @@
 Creating a calculator which will calculate the number of bars necessary for a merge tag
 to be properly printed at a steel mill. Also creating a calculating system for how many
 drops make a full run to cut bundles into the proper size.
+
+There is some terminology in the calculation that isn't exactly common knowledge.
+What I've based this off of is something that I do as an every day task at my job
+working for a steel mill. Part of what we have to do is keep track of how many pieces
+of metal we are producing by printing tags, and for each different "heat" we have to
+borrow pieces from the next "heat" coming up if we do not have enough pieces to make
+a full-sized bundle. I double-checked the math against standard calculations that we
+use, and everything checks out according to my experience. I thought it would be a
+better outcome if I based the program off something with which I was already familiar
+with doing daily. Also, it could be helpful somewhere down the line.
  */
 
 mergeNumber = [4];
