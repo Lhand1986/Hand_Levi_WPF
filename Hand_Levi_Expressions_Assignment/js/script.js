@@ -17,6 +17,11 @@ var barsInRun;
 
 var mergeNotification = "The number of bars you need to merge from the next heat is ";
 
-mergeNumber[0] = prompt("Enter the number of drops remaining on the hot bed")
-
+mergeNumber[0] = prompt("Enter the number of drops remaining on the hot bed");
+mergeNumber[1] = prompt("Enter the total number of bars per drop");
+mergeNumber[2] = prompt("Enter the number of cuts to make a full bundle");
+mergeNumber[3] = prompt("Enter the total number of bars that make a full bundle");
 console.log(mergeNumber[0]);
+console.log(mergeNumber[1]);
+console.log(mergeNumber[2]);
+console.log(mergeNumber[3]);
