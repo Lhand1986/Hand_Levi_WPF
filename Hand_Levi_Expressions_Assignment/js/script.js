@@ -41,5 +41,8 @@ numberOfBars = prompt("Enter the total number of bars per bundle");
 
 numberOfBars /= mergeNumber[2];
 
-console.log(numberOfBars);
+//console.log(numberOfBars);
 
+numberOfBars = numberOfBars / mergeNumber[1];
+
+alert(barsInRun + numberOfBars + ".");
