@@ -11,3 +11,11 @@ var numberOfPeople;
 var numberOfPizzas;
 var slicesEaten;
 
+//Assigning user input to variables via prompt
+numberOfSlices = prompt("Enter the number of slices per pizza");
+numberOfPeople = prompt("Enter the number of people at the party");
+numberOfPizzas = prompt("Enter the number of pizzas ordered");
+//Debugging output
+console.log(numberOfSlices);
+console.log(numberOfPeople);
+console.log(numberOfPizzas);
