@@ -22,3 +22,12 @@ discountedTotalWithoutTax = originalPrice - discountedTotalWithoutTax;
 
 //Debugging purposes
 //console.log(discountedTotalWithoutTax);
+
+//Expression to calculate the total tax
+discountedTotalTaxed = salesTax / 100 * discountedTotalWithoutTax;
+
+//Expression to assign the amount with tax to the variable
+discountedTotalTaxed = discountedTotalTaxed + discountedTotalWithoutTax;
+
+//Debugging purposes
+//console.log(discountedTotalTaxed);
