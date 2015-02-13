@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d25a0963-cbdb-425a-9c73-34a4316b79de" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Expressions_worksheet/Slice of pie 2/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Expressions_worksheet/Slice of pie 2/js/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Expressions_worksheet/Slice of pie 2/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Expressions_worksheet/Slice of pie 2/js/script.js" afterPath="$PROJECT_DIR$/Expressions_worksheet/Slice of pie 2/js/script.js" />
     </list>
     <ignored path="Hand_Levi_WPF.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,8 +49,8 @@
       <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Expressions_worksheet/Slice of pie 2/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6421233" vertical-offset="0" max-vertical-offset="584">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.6934931" vertical-offset="0" max-vertical-offset="584">
+              <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -103,8 +101,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="110" />
-    <option name="y" value="246" />
+    <option name="x" value="108" />
+    <option name="y" value="385" />
     <option name="width" value="1379" />
     <option name="height" value="681" />
   </component>
@@ -325,7 +323,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="110" y="246" width="1379" height="681" extended-state="0" />
+    <frame x="108" y="385" width="1379" height="681" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -571,8 +569,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Expressions_worksheet/Slice of pie 2/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6421233" vertical-offset="0" max-vertical-offset="584">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.6934931" vertical-offset="0" max-vertical-offset="584">
+          <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

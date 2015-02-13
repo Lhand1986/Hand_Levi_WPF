@@ -23,4 +23,6 @@ numberOfPizzas = prompt("Enter the number of pizzas ordered");
 //Expression to assign equation output to variable
 slicesEaten = numberOfPizzas * numberOfSlices % numberOfPeople;
 
-console.log(slicesEaten);
+//console.log(slicesEaten);
+
+alert("Sparky got " + slicesEaten + " slices of pizza.");
