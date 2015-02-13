@@ -31,3 +31,6 @@ discountedTotalTaxed = discountedTotalTaxed + discountedTotalWithoutTax;
 
 //Debugging purposes
 //console.log(discountedTotalTaxed);
+
+//Alert concatenation of string and numerical variables
+alert("Your " + itemDescription + " was originally $" + originalPrice + ", but after a " + discountPercentage + "% discount, it is now $" + discountedTotalWithoutTax + " without tax, and $" + discountedTotalTaxed + " with tax.");
