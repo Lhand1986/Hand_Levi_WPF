@@ -13,3 +13,9 @@ var dogYears;
 var sparkyAge = prompt("Enter Sparky's current age in human years.");
 //Output variable to console for debugging purposes
 //console.log(sparkyAge);
+
+//Adding expression to denote output data
+dogYears = dogConversion * sparkyAge;
+
+//Alert with concatenation of string and numerical variables
+alert("Sparky is " + sparkyAge + " human years old which is " + dogYears + " in dog years.");
