@@ -43,6 +43,7 @@ if(vehicleType != "Motorcycle" && vehicleType != "Car"){
         //Output if the statement is true
         console.log("You need to enter a number for your travel distance!");
     } else if(distanceTraveling < 0){
+        //Output if the previous statement is false and this statement is true
         console.log("You need to enter a positive number for your travel distance!");
     } else {
 
