@@ -38,6 +38,14 @@ distanceTraveling = prompt("Please enter the distance in miles that you will be 
 //Convert variable distanceTraveling to a float variable for easier calculation
 distanceTraveling = parseFloat(distanceTraveling);
 
+//IF STATEMENT NEEDS TO BE REEVALUATED TO MAKE A GOOD VALIDATION
+if(distanceTraveling < 0){
+    console.log("You need to enter a positive number!");
+} else {
+    //Output to tell the user how many miles they will be traveling
+    console.log("You are traveling a total distance of " + distanceTraveling + " miles.");
+}
+
 //Prompting the user for input on how full their gas tank is as a percentage
 percentCurrentGas = prompt("Enter the how full your tank currently is as a percent.");
 //Convert variable percentCurrentGas to a float variable for easier calculation
@@ -45,7 +53,5 @@ percentCurrentGas = parseFloat(percentCurrentGas);
 
 
 
-//Output to tell the user how many miles they will be traveling
-console.log("You are traveling a total distance of " + distanceTraveling + " miles.");
 //Output to tell the user how much gas they currently have as a percentage
 console.log("You currently have " + percentCurrentGas + "% of a tank remaining");
