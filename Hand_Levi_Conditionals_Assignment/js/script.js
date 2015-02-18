@@ -24,6 +24,17 @@ var percentCurrentGas;          //Variable filled using a prompt to denote what 
 //Prompting the user for input on what variety of vehicle they are using
 vehicleType =       prompt("Are you going to be driving a Motorcycle or a Car?");
 
+//Prompting the user for input on how far they will be traveling on this trip
+distanceTraveling = prompt("Please enter the distance in miles that you will be traveling.");
+//Convert variable distanceTraveling to a float variable for easier calculation
+distanceTraveling = parseFloat(distanceTraveling);
+
+//Prompting the user for input on how full their gas tank is as a percentage
+percentCurrentGas = prompt("Enter the how full your tank currently is as a percent.");
+//Convert variable percentCurrentGas to a float variable for easier calculation
+percentCurrentGas = parseFloat(percentCurrentGas);
+
+
 //This statement is checking to see if the user has input either Motorcycle or Car as their vehicle type
 if(vehicleType != "Motorcycle" && vehicleType != "Car"){
     //This is what happens if the statement provided proves to be true
@@ -31,34 +42,20 @@ if(vehicleType != "Motorcycle" && vehicleType != "Car"){
 } else {
     //This is what happens if the statement provided proves to be false
     console.log("You will be driving a " + vehicleType + " on this trip.");
+
+    if(isNaN(distanceTraveling)){
+        //Output if the statement is true
+        console.log("You need to enter a positive number for your travel distance!");
+    } else {
+        //Output if the statement is false
+        //Output to tell the user how many miles they will be traveling
+        console.log("You are traveling a total distance of " + distanceTraveling + " miles.");
+        if(isNaN(percentCurrentGas) || percentCurrentGas > 100 ){
+            //Output if the statement is true
+            console.log("You need to enter a positive number below 101 for remaining fuel!")
+        } else {
+            //Output to tell the user how much gas they currently have as a percentage
+            console.log("You currently have " + percentCurrentGas + "% of a tank remaining");
+        }
+    }
 }
-
-//Prompting the user for input on how far they will be traveling on this trip
-distanceTraveling = prompt("Please enter the distance in miles that you will be traveling.");
-//Convert variable distanceTraveling to a float variable for easier calculation
-distanceTraveling = parseFloat(distanceTraveling);
-
-//If statement checking to see if the input is a number or a string
-if(isNaN(distanceTraveling)){
-    //Output if the statement is true
-    console.log("You need to enter a positive number for your travel distance!");
-} else {
-    //Output if the statement is false
-    //Output to tell the user how many miles they will be traveling
-    console.log("You are traveling a total distance of " + distanceTraveling + " miles.");
-}
-
-//Prompting the user for input on how full their gas tank is as a percentage
-percentCurrentGas = prompt("Enter the how full your tank currently is as a percent.");
-//Convert variable percentCurrentGas to a float variable for easier calculation
-percentCurrentGas = parseFloat(percentCurrentGas);
-
-//If statement checking to see if the input is a number or a string
-if(isNaN(percentCurrentGas) || percentCurrentGas > 100 ){
-    //Output if the statement is true
-    console.log("You need to enter a positive number below 101 for remaining fuel!")
-} else {
-    //Output to tell the user how much gas they currently have as a percentage
-    console.log("You currently have " + percentCurrentGas + "% of a tank remaining");
-}
-
