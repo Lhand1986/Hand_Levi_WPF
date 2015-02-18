@@ -26,10 +26,10 @@ vehicleType =       prompt("Are you going to be driving a Motorcycle or a Car?")
 
 //This statement is checking to see if the user has input either Motorcycle or Car as their vehicle type
 if(vehicleType != "Motorcycle" && vehicleType != "Car"){
-    //This is what happens if the statement provided proves to be false
+    //This is what happens if the statement provided proves to be true
     console.log("You need to enter either Motorcycle or Car!");
 } else {
-    //This is what happens if the statement provided proves to be true
+    //This is what happens if the statement provided proves to be false
     console.log("You will be driving a " + vehicleType + " on this trip.");
 }
 
@@ -38,10 +38,12 @@ distanceTraveling = prompt("Please enter the distance in miles that you will be 
 //Convert variable distanceTraveling to a float variable for easier calculation
 distanceTraveling = parseFloat(distanceTraveling);
 
-//IF STATEMENT NEEDS TO BE REEVALUATED TO MAKE A GOOD VALIDATION
-if(distanceTraveling < 0){
-    console.log("You need to enter a positive number!");
+//If statement checking to see if the input is a number or a string
+if(isNaN(distanceTraveling)){
+    //Output if the statement is true
+    console.log("You need to enter a positive number for your travel distance!");
 } else {
+    //Output if the statement is false
     //Output to tell the user how many miles they will be traveling
     console.log("You are traveling a total distance of " + distanceTraveling + " miles.");
 }
@@ -51,7 +53,12 @@ percentCurrentGas = prompt("Enter the how full your tank currently is as a perce
 //Convert variable percentCurrentGas to a float variable for easier calculation
 percentCurrentGas = parseFloat(percentCurrentGas);
 
+//If statement checking to see if the input is a number or a string
+if(isNaN(percentCurrentGas) || percentCurrentGas > 100 ){
+    //Output if the statement is true
+    console.log("You need to enter a positive number below 101 for remaining fuel!")
+} else {
+    //Output to tell the user how much gas they currently have as a percentage
+    console.log("You currently have " + percentCurrentGas + "% of a tank remaining");
+}
 
-
-//Output to tell the user how much gas they currently have as a percentage
-console.log("You currently have " + percentCurrentGas + "% of a tank remaining");
