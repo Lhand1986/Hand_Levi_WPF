@@ -37,7 +37,7 @@ if(vehicleType != "Motorcycle" && vehicleType != "Car"){
     distanceTraveling = prompt("Please enter the distance in miles that you will be traveling.");
     //Convert variable distanceTraveling to a float variable for easier calculation
     distanceTraveling = parseFloat(distanceTraveling);
-    console.log("You will be driving a " + vehicleType + " on this trip.");
+    //console.log("You will be driving a " + vehicleType + " on this trip.");
 
     if(isNaN(distanceTraveling)){
         //Output if the statement is true
@@ -51,25 +51,26 @@ if(vehicleType != "Motorcycle" && vehicleType != "Car"){
         //Convert variable percentCurrentGas to a float variable for easier calculation
         percentCurrentGas = parseFloat(percentCurrentGas);
 
-        //Output to tell the user how many miles they will be traveling
-        console.log("You are traveling a total distance of " + distanceTraveling + " miles.");
-
         if(isNaN(percentCurrentGas) || percentCurrentGas > 100 ){
             //Output if the statement is true
 
             console.log("You need to enter a positive number below 101 for remaining fuel!")
         } else {
-            //Output to tell the user how much gas they currently have as a percentage
-            console.log("You currently have " + percentCurrentGas + "% of a tank remaining");
 
             //Figure out how much distance you can travel with the amount of fuel currently available
             currentGasDistance = (vehicleType === "Motorcycle") ? percentCurrentGas / 100 * vehicleMotorcycle : percentCurrentGas / 100 * vehicleCar;
 
             //Statement to determine the total distance to travel
-            travelDistance = currentGasDistance + distanceTraveling;
+            travelDistance = distanceTraveling - currentGasDistance;
             //Ternary statement determines how many stops will have to be made along the way to refuel
             travelStops = (vehicleType === "Motorcycle") ? travelDistance / vehicleMotorcycle : travelDistance / vehicleCar;
-            //Output how many stops need to be made to the console.log
+            //Output the vehicle type
+            console.log("You will be driving a " + vehicleType + " on this trip.");
+            //Output the total travel distance
+            console.log("You are traveling a total distance of " + distanceTraveling + " miles.");
+            //Output the current percentage of fuel remaining
+            console.log("You currently have " + percentCurrentGas + "% of a tank remaining");
+            //Output how many stops need to be made in order to complete the trip
             console.log("You will need to make " + travelStops + " stops for fuel in order to complete your trip.");
 
         }
