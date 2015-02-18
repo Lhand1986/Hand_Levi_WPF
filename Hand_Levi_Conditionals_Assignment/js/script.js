@@ -20,6 +20,7 @@ var vehicleMotorcycle = 150;    //Static variable which denotes 150 miles for th
 var vehicleCar =        300;    //Static variable which denotes 300 miles for the car
 var distanceTraveling;          //Filled using a prompt to determine what the distance of the trip is
 var percentCurrentGas;          //Variable filled using a prompt to denote what percentage of gas the vehicle currently has
+var currentGasDistance;
 
 //Prompting the user for input on what variety of vehicle they are using
 vehicleType = prompt("Are you going to be driving a Motorcycle or a Car?");
@@ -56,3 +57,5 @@ if(vehicleType != "Motorcycle" && vehicleType != "Car"){
         }
     }
 }
+//Figure out how much distance you can travel with the amount of fuel currently available
+currentGasDistance = (vehicleType === "Motorcycle") ? percentCurrentGas / 100 * vehicleMotorcycle : percentCurrentGas / 100 * vehicleCar;
