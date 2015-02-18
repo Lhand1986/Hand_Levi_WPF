@@ -41,8 +41,11 @@ if(vehicleType != "Motorcycle" && vehicleType != "Car"){
 
     if(isNaN(distanceTraveling)){
         //Output if the statement is true
+        console.log("You need to enter a number for your travel distance!");
+    } else if(distanceTraveling < 0){
         console.log("You need to enter a positive number for your travel distance!");
     } else {
+
         //If the statement is false
 
         //Prompting the user for input on how full their gas tank is as a percentage
@@ -51,11 +54,16 @@ if(vehicleType != "Motorcycle" && vehicleType != "Car"){
         //Convert variable percentCurrentGas to a float variable for easier calculation
         percentCurrentGas = parseFloat(percentCurrentGas);
 
+        //Statement checking to see if percentCurrentGas is a number or is greater than 100
         if(isNaN(percentCurrentGas) || percentCurrentGas > 100 ){
             //Output if the statement is true
-
-            console.log("You need to enter a positive number below 101 for remaining fuel!")
-        } else {
+            console.log("You need to enter a number below 101 for remaining fuel!")
+        //Statement checking to see if percentCurrentGas is a number or is less than 0
+        } else if(isNaN(percentCurrentGas) || percentCurrentGas < 0){
+            //Output data to console.log
+            console.log("You need to enter a positive number for your remaining fuel!");
+        }
+        else {
 
             //Figure out how much distance you can travel with the amount of fuel currently available
             currentGasDistance = (vehicleType === "Motorcycle") ? percentCurrentGas / 100 * vehicleMotorcycle : percentCurrentGas / 100 * vehicleCar;
