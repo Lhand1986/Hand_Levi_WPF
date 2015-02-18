@@ -84,3 +84,14 @@ if(vehicleType != "Motorcycle" && vehicleType != "Car"){
         }
     }
 }
+
+/*
+Test 1
+For a car I typed in 1500 for the distance, and 50 percent for the fuel remaining, and was given 4.5 stops as the output.
+Test 2
+For a motorcycle I typed in 1500 for the distance, and 50 percent for the fuel remaining, and was given 9.5 stops as the output.
+Test 3
+For a car I typed in 2000 for the distance, and 30 percent for the fuel remaining, and was given 6.36 stops as the output.
+Test 4
+For a motorcycle I typed in 2000 for the distance, and 30 percent for the fuel remaining, and was given 13.03 stops as the output.
+*/
