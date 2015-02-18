@@ -21,3 +21,21 @@ var vehicleCar =        300;    //Static variable which denotes 300 miles for th
 var distanceTraveling;          //Filled using a prompt to determine what the distance of the trip is
 var percentCurrentGas;          //Variable filled using a prompt to denote what percentage of gas the vehicle currently has
 
+//Prompting the user for input on what variety of vehicle they are using
+vehicleType =       prompt("Are you going to be driving a Motorcycle or a Car?");
+//Prompting the user for input on how far they will be traveling on this trip
+distanceTraveling = prompt("Please enter the distance in miles that you will be traveling.");
+//Convert variable distanceTraveling to a float variable for easier calculation
+distanceTraveling = parseFloat(distanceTraveling);
+//Prompting the user for input on how full their gas tank is as a percentage
+percentCurrentGas = prompt("Enter the how full your tank currently is as a percent.");
+//Convert variable percentCurrentGas to a float variable for easier calculation
+percentCurrentGas = parseFloat(percentCurrentGas);
+
+
+//Output to tell the user what type of vehicle they are using
+console.log("You will be driving a " + vehicleType + " on this trip.");
+//Output to tell the user how many miles they will be traveling
+console.log("You are traveling a total distance of " + distanceTraveling + " miles.");
+//Output to tell the user how much gas they currently have as a percentage
+console.log("You currently have " + percentCurrentGas + "% of a tank remaining");
