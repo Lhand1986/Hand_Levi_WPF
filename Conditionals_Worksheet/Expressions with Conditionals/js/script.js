@@ -1,4 +1,8 @@
-//Last Chance for Gas - Worksheet
+/*
+ Levi Hand
+ 19FEB2015
+ Last Chance for Gas - Worksheet
+ */
 
 /*
 Creating an output using three givens

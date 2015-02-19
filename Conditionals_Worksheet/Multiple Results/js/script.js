@@ -1,4 +1,8 @@
-//Check the Login
+/*
+ Levi Hand
+ 19FEB2015
+ Check the Login
+ */
 
 /*
   Make sure the user has the correct username and password.
