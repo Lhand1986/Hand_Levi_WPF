@@ -17,3 +17,11 @@ do{ // Runs the code before checking the condition
     c--;
 }
 while(c > 0); // As long as this condition is true
+
+
+console.log("------------ For Loops ------------");
+
+
+for (var i = 10; i > 0; i--){ // Shorthand version of the while and do while loop
+    console.log(i + " kegs on the wall.");
+}
