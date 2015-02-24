@@ -18,12 +18,18 @@
 //Week 4
 
 // variables
-
+var myName = prompt("Enter your first name please:");
 
 // functions
 function nameValidation() {
 
-    console.log("My function works!");
+    while (myName === "") {
+
+        myName = prompt("Do not leave this field blank.\n\nPlease enter your first name.");
+
+    }
+
+    console.log("Welcome " + myname + ".");
 
 }
 
