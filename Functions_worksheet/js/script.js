@@ -14,3 +14,12 @@ console.log("The Area of the Rectangle is " + area);
 function calculateArea(w, h){
     return w * h;
 }
+
+// Calculate the circumference of a circle using functions
+
+// Initialize variable to denote the radius of the circle
+var circleRad = 7;
+
+// Call the function using variable circleRad and the number 2
+var circumference = calculateCirc(circleRad, 2);
+console.log("The circumference of the circle is " + circumference);
