@@ -23,13 +23,20 @@ var myName = prompt("Enter your first name please:");
 // functions
 function nameValidation() {
 
+    var numOfTimes = 1;
+
     while (myName === "") {
 
         myName = prompt("Do not leave this field blank.\n\nPlease enter your first name.");
+        numOfTimes = numOfTimes + 1;
 
+        if (numOfTimes === 10) {
+            console.log("Enough! I haven't time to play today!");
+            break;
+        }
     }
 
-    console.log("Welcome " + myname + ".");
+    console.log("Welcome " + myName + ".");
 
 }
 
