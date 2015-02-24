@@ -23,3 +23,8 @@ var circleRad = 7;
 // Call the function using variable circleRad and the number 2
 var circumference = calculateCirc(circleRad, 2);
 console.log("The circumference of the circle is " + circumference);
+
+// Created function to calculate the radius of the circle using Math operator
+function calculateCirc(r, c){
+    return r * c * Math.PI;
+}
