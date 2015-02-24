@@ -12,7 +12,7 @@ console.log("------------ Do While Loops ------------")
 
 var c = 10;
 
-do{ // Runs the code before checking the condition
+do{ // Runs the code before checking the condition, will always happen at least once
     console.log(c + " kegs on the wall");
     c--;
 }
