@@ -19,6 +19,7 @@
 
 // variables
 var myName = prompt("Enter your first name please:");
+var myRandom;
 
 // functions
 function nameValidation(firstName) {
@@ -42,15 +43,19 @@ function nameValidation(firstName) {
 
 function randomNumberGenerator(min, max) {
 
+    var myNumberArray = [];
 
     // minimum is 10 and our maximum is 50
     // Math.random() * (max - min) + min
-    var randomNumber = Math.random() * (max - min) + min;
+    for (var i = 0; i < 5; i++) {
+
+        var randomNumber = Math.random() * (max - min) + min;
 
 
-    randomNumber = Math.ceil(randomNumber);
-
-    console.log(randomNumber);
+        randomNumber = Math.ceil(randomNumber);
+        myNumberArray[i] = randomNumber;
+    }
+    return myNumberArray;
 
 }
 
@@ -58,6 +63,6 @@ function randomNumberGenerator(min, max) {
 // main code
 myName = nameValidation(myName);
 
-randomNumberGenerator(24, 150);
+myRandom = randomNumberGenerator(24, 150);
 
-console.log("Welcome " + myName + ".");
+console.log("Welcome " + myName + ", your random number is " + myRandom);
