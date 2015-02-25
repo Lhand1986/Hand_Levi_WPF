@@ -40,7 +40,24 @@ function nameValidation(firstName) {
 
 }
 
+function randomNumberGenerator(min, max) {
+
+
+    // minimum is 10 and our maximum is 50
+    // Math.random() * (max - min) + min
+    var randomNumber = Math.random() * (max - min) + min;
+
+
+    randomNumber = Math.ceil(randomNumber);
+
+    console.log(randomNumber);
+
+}
+
+
 // main code
 myName = nameValidation(myName);
+
+randomNumberGenerator(24, 150);
 
 console.log("Welcome " + myName + ".");
