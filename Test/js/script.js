@@ -39,3 +39,4 @@ mergeNumber[4] = mergeNumber[0] *  mergeNumber[1] * mergeNumber[2];
 // Utilizing an assignment operator to assign a value from a shortened expression.
 mergeNumber[3] -= mergeNumber[4];
 
+//Test
