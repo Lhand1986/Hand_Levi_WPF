@@ -36,9 +36,11 @@ function nameValidation(firstName) {
         }
     }
 
-    console.log("Welcome " + firstName + ".");
+    return firstName;
 
 }
 
 // main code
-nameValidation(myName);
+myName = nameValidation(myName);
+
+console.log("Welcome " + myName + ".");
