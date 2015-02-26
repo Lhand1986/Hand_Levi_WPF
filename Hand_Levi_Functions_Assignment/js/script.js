@@ -57,7 +57,7 @@ function lotteryValidation(lotteryName){
     while (lotteryName === ""){
 
         //Reenter user input with a prompt and string message
-        lotteryName = prompt("You did not enter any valid input.\nPlease enter either \"Powerball\" or \"Florida Lottery\".");
+        lotteryName = prompt("You did not enter any valid input.\nPlease enter either \"Powerball\" or \"Florida Lottery\" numbers.");
         //Increment counter variable
         numOfTimes++;
 
@@ -156,19 +156,35 @@ lotterySelection = lotteryValidation(lotterySelection);
 //Debugging to ensure that the function returns the proper value
 //console.log(lotterySelection);
 
+//Checking to see if the lotterySelection variable equals "Florida Lottery"
 if (lotterySelection === "Florida Lottery") {
     //Call lotteryNumberGenerator function
-    lotteryOutput = lotteryNumberGenerator(1, 59);
+    lotteryOutput = lotteryNumberGenerator(1, 53);
 
     //Test the value of lotteryOutput
     //console.log("Fixed " + lotteryOutput);
 
+    //Output Florida Lottery number selection
     console.log("Your Florida Lottery numbers are: " + lotteryOutput);
+
+//Checking to see if the lotterySelection variable equals "Powerball"
+}else if (lotterySelection === "Powerball"){
+    //Call lotteryNumberGenerator function
+    lotteryOutput = lotteryNumberGenerator(1, 59);
+
+    //Call the powerBall function and assign an argument
+    intPowerBall = powerBall(1, 35);
+
+    //Output Powerball selection
+    console.log("Your Powerball numbers are: " + lotteryOutput + " with PB " + intPowerBall);
+
+    //If none of the previous conditions are true, they didn't follow the instructions very well.
+    }else{
+    //Output request to follow the instructions
+    console.log("Follow the instructions, please.")
 }
 
 
-//Call the powerBall function and assign an argument
-intPowerBall = powerBall(1, 35);
 
 //Test the output value of the powerBall function
 //console.log(intPowerBall);
