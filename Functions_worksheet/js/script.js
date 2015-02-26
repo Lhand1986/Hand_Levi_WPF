@@ -41,4 +41,30 @@ function calculateCirc(r, c){
 var animalWeight = prompt("Please enter the weight of the animal.");
 
 //Initialize variable to gain a total number of stings and call function
-var totalStings = beeStings(animalWeight);
+var totalStings = beeStings(animalWeight, 8.666666667);
+
+//Added output concatenation of variable and two strings.
+console.log("It takes " + totalStings + " bee stings to kill this animal.");
+
+//Create function to calculate how many stings it takes to kill this animal
+function beeStings(weight, stings){
+
+
+    //Multiply local variables weight by stings and return value
+    return weight * stings;
+
+}
+
+/*
+ Input value for stings was 150.
+
+ The Area of the Rectangle is 30
+ 25 The circumference of the circle is 43.982297150257104
+ It takes 1300.00000005 bee stings to kill this animal.
+
+ Input value for stings was 1.
+
+ The Area of the Rectangle is 30
+ The circumference of the circle is 43.982297150257104
+ It takes 8.666666667 bee stings to kill this animal.
+ */
