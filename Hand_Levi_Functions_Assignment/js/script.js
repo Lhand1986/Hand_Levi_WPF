@@ -51,10 +51,10 @@ function lotteryValidation(lotteryName){
     var numOfTimes = 1;
 
     //Creating while loop to validate user input
-    while (lotteryName != "Powerball" && lotteryName != "Florida Lottery"){
+    while (lotteryName === ""){
 
         //Reenter user input with a prompt and string message
-        lotteryName = prompt("You entered " + lotteryName + "." + "\nPlease enter either \"Powerball\" or \"Florida Lottery\".");
+        lotteryName = prompt("You did not enter any valid input.\nPlease enter either \"Powerball\" or \"Florida Lottery\".");
         //Increment counter variable
         numOfTimes++;
 
@@ -62,8 +62,7 @@ function lotteryValidation(lotteryName){
         if (numOfTimes === 10){
 
             //Debugging to ensure that the counter and name input works correctly
-            console.log(numOfTimes);
-            console.log(lotteryName);
+            //console.log(numOfTimes);
 
             //Error message to notify the user
             console.log("You had 10 chances to make a choice. No lottery for you!");
@@ -71,11 +70,13 @@ function lotteryValidation(lotteryName){
             break;
         }
 
-        return lotteryName;
     }
-
+    //Output local value to function call variable
+    return lotteryName;
 }
 //Main code
 
+//Call lotteryValidation function
 lotterySelection = lotteryValidation(lotterySelection);
-console.log(lotterySelection);
+//Debugging to ensure that the function returns the proper value
+//console.log(lotterySelection);
