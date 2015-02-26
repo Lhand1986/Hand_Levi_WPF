@@ -81,9 +81,9 @@ function lotteryNumberGenerator(min, max) {
     //Create function to compare numbers within the function and reduce one of them by one if there is a match
     function compareNumbers(a, b){
         if (a === b){
-            a --
-            return a;
+            a--
         }
+        return a;
     }
 
     //Initialize a number array to hold lottery numbers
@@ -101,19 +101,19 @@ function lotteryNumberGenerator(min, max) {
         //Use the counter of the while loop to assign the random value to different spots in the array
         myLottoNumbers[i] = randomNumber;
 
-        console.log("Original" + myLottoNumbers);
+        console.log("Original " + myLottoNumbers);
 
         //Utilize the compareNumbers function to check the numbers within the array
         myLottoNumbers[0] = compareNumbers(myLottoNumbers[0], myLottoNumbers[1]);
         myLottoNumbers[0] = compareNumbers(myLottoNumbers[0], myLottoNumbers[2]);
         myLottoNumbers[0] = compareNumbers(myLottoNumbers[0], myLottoNumbers[3]);
         myLottoNumbers[0] = compareNumbers(myLottoNumbers[0], myLottoNumbers[4]);
-        myLottoNumbers[0] = compareNumbers(myLottoNumbers[1], myLottoNumbers[2]);
-        myLottoNumbers[0] = compareNumbers(myLottoNumbers[1], myLottoNumbers[3]);
-        myLottoNumbers[0] = compareNumbers(myLottoNumbers[1], myLottoNumbers[4]);
-        myLottoNumbers[0] = compareNumbers(myLottoNumbers[2], myLottoNumbers[3]);
-        myLottoNumbers[0] = compareNumbers(myLottoNumbers[2], myLottoNumbers[4]);
-        myLottoNumbers[0] = compareNumbers(myLottoNumbers[3], myLottoNumbers[4]);
+        myLottoNumbers[1] = compareNumbers(myLottoNumbers[1], myLottoNumbers[2]);
+        myLottoNumbers[1] = compareNumbers(myLottoNumbers[1], myLottoNumbers[3]);
+        myLottoNumbers[1] = compareNumbers(myLottoNumbers[1], myLottoNumbers[4]);
+        myLottoNumbers[2] = compareNumbers(myLottoNumbers[2], myLottoNumbers[3]);
+        myLottoNumbers[2] = compareNumbers(myLottoNumbers[2], myLottoNumbers[4]);
+        myLottoNumbers[3] = compareNumbers(myLottoNumbers[3], myLottoNumbers[4]);
     }
 
     return myLottoNumbers;
@@ -131,4 +131,4 @@ lotterySelection = lotteryValidation(lotterySelection);
 lotteryOutput = lotteryNumberGenerator(1, 59);
 
 //Test the value of lotteryOutput
-console.log("Fixed" + lotteryOutput);
+console.log("Fixed " + lotteryOutput);
