@@ -33,8 +33,8 @@
 
 //Variables
 
-//Initialize variable with prompt for user to select what lottery they want
-var lotterySelection = prompt("Please type whether you would like the Powerball or Florida Lottery.");
+//Initialize variable for user to select what lottery they want
+var lotterySelection;
 
 //Initialize variable to hold function output
 var lotteryOutput;
@@ -49,6 +49,9 @@ var intPowerBall;
 
 //Create a function to validate the lottery selection
 function lotteryValidation(lotteryName){
+
+    //Prompt user to select what lottery they want
+    lotteryName = prompt("Please type whether you would like the Powerball or Florida Lottery.");
 
     //Create a counter variable so the loop does not continue infinitely
     var numOfTimes = 1;
