@@ -39,6 +39,9 @@ var lotterySelection = prompt("Please type whether you would like the Powerball 
 //Initialize variable to hold function output
 var lotteryOutput;
 
+//Initialize a variable to hold the powerball output
+var intPowerBall;
+
 //Verify that user input works.
 //console.log(lotterySelection);
 
@@ -80,9 +83,12 @@ function lotteryNumberGenerator(min, max) {
 
     //Create function to compare numbers within the function and reduce one of them by one if there is a match
     function compareNumbers(a, b){
+        //If argument a is strictly equal to argument b
         if (a === b){
+            //Decrement argument a
             a--
         }
+        //Return decremented output of argument a to the function call
         return a;
     }
 
@@ -101,23 +107,46 @@ function lotteryNumberGenerator(min, max) {
         //Use the counter of the while loop to assign the random value to different spots in the array
         myLottoNumbers[i] = randomNumber;
 
-        console.log("Original " + myLottoNumbers);
+        //Debugging output to ensure that the compareNumbers function is working properly
+        //console.log("Original " + myLottoNumbers);
 
         //Utilize the compareNumbers function to check the numbers within the array
         myLottoNumbers[0] = compareNumbers(myLottoNumbers[0], myLottoNumbers[1]);
+        //Utilize the compareNumbers function to check the numbers within the array
         myLottoNumbers[0] = compareNumbers(myLottoNumbers[0], myLottoNumbers[2]);
+        //Utilize the compareNumbers function to check the numbers within the array
         myLottoNumbers[0] = compareNumbers(myLottoNumbers[0], myLottoNumbers[3]);
+        //Utilize the compareNumbers function to check the numbers within the array
         myLottoNumbers[0] = compareNumbers(myLottoNumbers[0], myLottoNumbers[4]);
+        //Utilize the compareNumbers function to check the numbers within the array
         myLottoNumbers[1] = compareNumbers(myLottoNumbers[1], myLottoNumbers[2]);
+        //Utilize the compareNumbers function to check the numbers within the array
         myLottoNumbers[1] = compareNumbers(myLottoNumbers[1], myLottoNumbers[3]);
+        //Utilize the compareNumbers function to check the numbers within the array
         myLottoNumbers[1] = compareNumbers(myLottoNumbers[1], myLottoNumbers[4]);
+        //Utilize the compareNumbers function to check the numbers within the array
         myLottoNumbers[2] = compareNumbers(myLottoNumbers[2], myLottoNumbers[3]);
+        //Utilize the compareNumbers function to check the numbers within the array
         myLottoNumbers[2] = compareNumbers(myLottoNumbers[2], myLottoNumbers[4]);
+        //Utilize the compareNumbers function to check the numbers within the array
         myLottoNumbers[3] = compareNumbers(myLottoNumbers[3], myLottoNumbers[4]);
     }
-
+    //Return value of local array myLottoNumbers to function call
     return myLottoNumbers;
 
+}
+
+//Create function to output powerball number using a minimum and maximum parameter
+function powerBall(min, max){
+
+    //Initialize a variable and apply the Math.random calculation
+    var myPowerBall = Math.random() * (max - min) + min;
+
+    //Round the random variable up from the nearest decimal to a whole number
+    myPowerBall = Math.ceil(myPowerBall);
+
+    //Return the value of the variable myPowerBall to the function call
+    return myPowerBall;
 }
 
 //Main code
@@ -127,8 +156,19 @@ lotterySelection = lotteryValidation(lotterySelection);
 //Debugging to ensure that the function returns the proper value
 //console.log(lotterySelection);
 
-//Call lotteryNumberGenerator function
-lotteryOutput = lotteryNumberGenerator(1, 59);
+if (lotterySelection === "Florida Lottery") {
+    //Call lotteryNumberGenerator function
+    lotteryOutput = lotteryNumberGenerator(1, 59);
 
-//Test the value of lotteryOutput
-console.log("Fixed " + lotteryOutput);
+    //Test the value of lotteryOutput
+    //console.log("Fixed " + lotteryOutput);
+
+    console.log("Your Florida Lottery numbers are: " + lotteryOutput);
+}
+
+
+//Call the powerBall function and assign an argument
+intPowerBall = powerBall(1, 35);
+
+//Test the output value of the powerBall function
+//console.log(intPowerBall);
