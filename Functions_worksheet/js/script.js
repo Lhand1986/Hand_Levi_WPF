@@ -38,5 +38,7 @@ function calculateCirc(r, c){
  */
 
 //Initialize variable for weight
-var animalWeight;
+var animalWeight = prompt("Please enter the weight of the animal.");
 
+//Initialize variable to gain a total number of stings and call function
+var totalStings = beeStings(animalWeight);
