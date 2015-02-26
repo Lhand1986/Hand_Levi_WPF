@@ -31,8 +31,51 @@
     Each prompt should be validated using a while loop.
  */
 
+//Variables
+
 //Initialize variable with prompt for user to select what lottery they want
 var lotterySelection = prompt("Please type whether you would like the Powerball or Florida Lottery.");
 
+//Initialize variable to hold function output
+var lotteryOutput;
+
 //Verify that user input works.
 //console.log(lotterySelection);
+
+//Functions
+
+//Create a function to validate the lottery selection
+function lotteryValidation(lotteryName){
+
+    //Create a counter variable so the loop does not continue infinitely
+    var numOfTimes = 1;
+
+    //Creating while loop to validate user input
+    while (lotteryName != "Powerball" && lotteryName != "Florida Lottery"){
+
+        //Reenter user input with a prompt and string message
+        lotteryName = prompt("You entered " + lotteryName + "." + "\nPlease enter either \"Powerball\" or \"Florida Lottery\".");
+        //Increment counter variable
+        numOfTimes++;
+
+        //Create if statement to break loop
+        if (numOfTimes === 10){
+
+            //Debugging to ensure that the counter and name input works correctly
+            console.log(numOfTimes);
+            console.log(lotteryName);
+
+            //Error message to notify the user
+            console.log("You had 10 chances to make a choice. No lottery for you!");
+            //Break out of the while loop
+            break;
+        }
+
+        return lotteryName;
+    }
+
+}
+//Main code
+
+lotterySelection = lotteryValidation(lotterySelection);
+console.log(lotterySelection);
