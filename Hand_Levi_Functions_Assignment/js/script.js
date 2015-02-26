@@ -74,9 +74,36 @@ function lotteryValidation(lotteryName){
     //Output local value to function call variable
     return lotteryName;
 }
+
+//Initialize function to create lottery numbers
+function lotteryNumberGenerator(min, max) {
+
+    //Initialize a number array to hold lottery numbers
+    var myLottoNumbers = [];
+
+    //Create a while loop with a max loop number
+    for (var i = 0; i < 5; i++) {
+
+        //Initialize variable and utilize Math function with equation to make a range of random numbers
+        var randomNumber = Math.random() * (max - min) + min;
+
+
+        randomNumber = Math.ceil(randomNumber);
+        myLottoNumbers[i] = randomNumber;
+    }
+    return myLottoNumbers;
+
+}
+
+
 //Main code
 
 //Call lotteryValidation function
 lotterySelection = lotteryValidation(lotterySelection);
 //Debugging to ensure that the function returns the proper value
 //console.log(lotterySelection);
+
+//Call lotteryNumberGenerator function
+lotteryOutput = lotteryNumberGenerator(1, 59);
+//Test the value of lotteryOutput
+console.log(lotteryOutput);
