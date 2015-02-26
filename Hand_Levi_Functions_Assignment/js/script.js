@@ -191,3 +191,8 @@ if (lotterySelection === "Florida Lottery") {
 
 //Test the output value of the powerBall function
 //console.log(intPowerBall);
+
+/*
+ Your Powerball numbers are: 37,14,52,58,44 with PB 17
+ Your Florida Lottery numbers are: 53,36,37,3,38
+ */
